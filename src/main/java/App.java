@@ -34,14 +34,14 @@ public class App {
       int cuisineId = Integer.parseInt(request.queryParams("cuisineName"));
       Restaurant newRestaurant = new Restaurant(restaurantName, null, null, cuisineId);
       newRestaurant.save();
-      model.put("restaurant", newRestaurant);
+      model.put("restaurants", newRestaurant);
       model.put("template", "templates/restaurant.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
     get("/restaurants", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      model.put("restaurant", Restaurant.all());
+      model.put("restaurants", Restaurant.all());
       model.put("template", "templates/restaurants.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());

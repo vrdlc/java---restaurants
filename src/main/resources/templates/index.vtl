@@ -2,8 +2,10 @@ index.vtl
 
 <h1>Welcome to the Restaurant Finder!</h1>
 
+<a href="/restaurants">Find by type of Cuisine</a>
+<a href="/categories/new">Add a new type of Cuisine</a>
 
-<form action="/restaurants/$restaurant.getId()" method="post">
+<!-- <form action="/restaurants/$restaurant.getId()" method="post">
   <div class="form-group">
     <input id="restaurantId" name="restaurantId" type=hidden value="$restaurant.getId">
     <label for="restaurantName">Enter Restaurant Name</label>
@@ -18,7 +20,7 @@ index.vtl
     </select>
   </div>
   <button type="submit" class="btn btn-success">Add Restaurant</button>
-</form>
+</form> -->
 
 <!-- POST FORM TO ADD RESTAURANT NAME = (Restaurant Name, null, null, cuisineId)
        DROPDOWN = (Cuisine Name)

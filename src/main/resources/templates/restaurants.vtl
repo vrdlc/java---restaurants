@@ -5,9 +5,6 @@ restaurants.vtl (all)
 <ul>
   #foreach($restaurant in $restaurants)
   <li><h4>$restaurant.getName()</h4></li>
-    <form action="/delete/restaurant/$restaurant.getId()" method="post">
-
-    </form>
   #end
 </ul>
 
